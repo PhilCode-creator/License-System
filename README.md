@@ -78,4 +78,3 @@ Feel free to contribute by forking the repository and submitting pull requests f
 ## License
 
 This project is licensed under the MIT License.
-```
