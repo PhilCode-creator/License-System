@@ -98,3 +98,26 @@ public class Auth {
         }
     }
 }
+
+//example
+
+public class Main {
+
+    public static void main(String[] args) {
+        String endpointURL = "https://your_endpoint_url_here";
+        Auth auth = new Auth(endpointURL);
+
+        try {
+            String licenseKey = "your_license_key_here";
+            boolean isValid = auth.authenticateLicense(licenseKey);
+            if (isValid) {
+                System.out.println("License is valid.");
+            } else {
+                System.out.println("License is not valid.");
+            }
+        } catch (IOException e) {
+            System.err.println("Error authenticating license: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+}
