@@ -7,13 +7,12 @@ This repository contains a Node.js and Express.js backend application designed f
 - **User Management**
   - Create new users with username, email, and password.
   - Retrieve user ranks based on authentication token.
- 
+
 - **License Management**
   - Create new licenses with specified durations.
   - Suspend, delete, and claim licenses.
   - Authenticate licenses based on IP and license key.
-  - Retrieve total license count.\n\n
-  -
+  - Retrieve total license count.
 
 ## Technologies Used
 
@@ -22,17 +21,61 @@ This repository contains a Node.js and Express.js backend application designed f
 - **Additional Libraries**: dotenv for environment configuration, body-parser for JSON parsing
 
 ## Setup Instructions
+
 1. Clone the repository:
-  ```git clone https://github.com/PhilCode-creator/License-System/.git```
+   ```
+   git clone https://github.com/your-username/your-repo.git
+   ```
 
-3. Install dependencies:
-  ```npm i```
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-4. Configure environment variables:
+3. Configure environment variables:
    - Create a `.env` file in the `config` directory.
-   - Define necessary variables.
-    
-5. Start the server:
-   ```node .```
+   - Define necessary variables (e.g., database connection string).
 
-## API Documentation\n\n### Create User\n\n- **Endpoint**: `POST /users/createUser`\n- **Body**: ```json\n  {\n    "username": "example",\n    "email": "example@example.com",\n    "password": "password"\n  }\n  ```\n\n### Authenticate License\n\n- **Endpoint**: `POST /licenses/auth`\n- **Body**: ```json\n  {\n    "ip": "127.0.0.1",\n    "license": "license-key"\n  }\n  ```\n\n### Get License Amount\n\n- **Endpoint**: `GET /licenses/amount`\n\n## Usage\n\nDescribe any specific usage instructions or deployment considerations here.\n\n## Contributing\n\nFeel free to contribute by forking the repository and submitting pull requests for new features or bug fixes.\n\n## License\n\nThis project is licensed under the MIT License.
+4. Start the server:
+   ```
+   npm start
+   ```
+
+## API Documentation
+
+### Create User
+
+- **Endpoint**: `POST /users/createUser`
+- **Body**:
+  ```json
+  {
+    "username": "example",
+    "email": "example@example.com",
+    "password": "password"
+  }
+  ```
+
+### Authenticate License
+
+- **Endpoint**: `POST /licenses/auth`
+- **Body**:
+  ```json
+  {
+    "ip": "127.0.0.1",
+    "license": "license-key"
+  }
+  ```
+
+### Get License Amount
+
+- **Endpoint**: `GET /licenses/amount`
+
+
+## Contributing
+
+Feel free to contribute by forking the repository and submitting pull requests for new features or bug fixes.
+
+## License
+
+This project is licensed under the MIT License.
+```
