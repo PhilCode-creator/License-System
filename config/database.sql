@@ -1,0 +1,2 @@
+CREATE TABLE `users` (`id` INT NOT NULL AUTO_INCREMENT , `username` VARCHAR(64) NOT NULL , `email` VARCHAR(64) NOT NULL , `token` VARCHAR(64) NOT NULL , `password_hash` TEXT NOT NULL , `user_type` INT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB; 
+CREATE TABLE `licenses` (`id` INT NOT NULL AUTO_INCREMENT , `userid` INT, `license` VARCHAR(255) NOT NULL , `created` BIGINT NOT NULL , `expiry` BIGINT , `duration` INT NOT NULL , `ip` VARCHAR(32), `suspended` VARCHAR(12), PRIMARY KEY (`id`), UNIQUE (`license`)) ENGINE = InnoDB; 
