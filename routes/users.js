@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
  * Route to create a new user.
  * Requires username, email, and password in the request body.
  */
-router.get('/createUser', async (req, res) => {
+router.post('/createUser', async (req, res) => {
   const { username, email, password } = req.body;
 
   // Check if any of the values are undefined

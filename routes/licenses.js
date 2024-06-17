@@ -27,7 +27,7 @@ router.get('/amount', async (req, res) => {
  * Route to create a new license.
  * Requires authToken and duration in the request body.
  */
-router.get('/createLicense', async (req, res) => {
+router.post('/createLicense', async (req, res) => {
   const { authToken, duration } = req.body;
   if (authToken === undefined || duration === undefined) {
     return res.status(400).json({ success: false, error: 'Missing required fields' });
@@ -45,7 +45,7 @@ router.get('/createLicense', async (req, res) => {
  * Route to suspend a license.
  * Requires authToken and license in the request body.
  */
-router.get('/suspend', async (req, res) => {
+router.post('/suspend', async (req, res) => {
   const { authToken, license } = req.body;
   if (authToken === undefined || license === undefined) {
     return res.status(400).json({ success: false, error: 'Missing required fields' });
@@ -63,7 +63,7 @@ router.get('/suspend', async (req, res) => {
  * Route to delete a license.
  * Requires authToken and license in the request body.
  */
-router.get('/delete', async (req, res) => {
+router.delete('/delete', async (req, res) => {
   const { authToken, license } = req.body;
   if (authToken === undefined || license === undefined) {
     return res.status(400).json({ success: false, error: 'Missing required fields' });
@@ -82,7 +82,7 @@ router.get('/delete', async (req, res) => {
  * Route to authenticate a license.
  * Requires IP and license in the request body.
  */
-router.post('/auth', async (req, res) => {
+router.get('/auth', async (req, res) => {
   const { ip, license } = req.body;
   if (ip === undefined || license === undefined) {
     return res.status(400).json({ success: false, error: 'Missing required fields' });
@@ -100,7 +100,7 @@ router.post('/auth', async (req, res) => {
  * Route to claim a license.
  * Requires license and owner in the request body.
  */
-router.get('/claim', async (req, res) => {
+router.post('/claim', async (req, res) => {
   const { license, owner } = req.body;
   if (owner === undefined || license === undefined) {
     return res.status(400).json({ success: false, error: 'Missing required fields' });
